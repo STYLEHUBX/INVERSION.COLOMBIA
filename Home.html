@@ -21,13 +21,11 @@
         }
         .bio-image-container {
             width: 200px;
-            height: 200px;
             overflow: hidden;
-            transition: height 0.3s ease;
+            transition: max-height 0.3s ease;
         }
         .bio-image {
             width: 100%;
-            height: 100%;
             background-color: #ccc;
         }
         .button-container {
@@ -87,9 +85,7 @@
     <h1>Inversiones Colombia</h1>
     <button id="toggle-button">Mostrar/Ocultar Imagen</button>
     <div class="bio-image-container" id="image-container">
-        <div class="bio-image">
-            <!-- Aquí va la imagen de la biografía -->
-        </div>
+        <img src="ruta_a_la_imagen.jpg" alt="Imagen de la biografía" class="bio-image">
     </div>
     <div class="button-container">
         <button onclick="location.href='pagina1.html'">Botón 1</button>
@@ -119,19 +115,19 @@
     <script>
         const toggleButton = document.getElementById('toggle-button');
         const imageContainer = document.getElementById('image-container');
-        let isExpanded = false;
+        let isExpanded = true;
 
         toggleButton.addEventListener('click', () => {
             if (isExpanded) {
-                imageContainer.style.height = '0';
+                imageContainer.style.maxHeight = '0';
             } else {
-                imageContainer.style.height = '200px';
+                imageContainer.style.maxHeight = '500px';
             }
             isExpanded = !isExpanded;
         });
 
-        // Initialize image container height to 0
-        imageContainer.style.height = '0';
+        // Initialize image container height to 500px
+        imageContainer.style.maxHeight = '500px';
     </script>
 </body>
 </html>
