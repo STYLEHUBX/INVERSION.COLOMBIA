@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retiros Users</title>
+    <title>Retiros</title>
     <style>
         body {
             background-color: #003366; /* Azul oscuro */
@@ -21,14 +21,14 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 400px; /* Reducido para hacerlo más angosto */
+            max-width: 90%; /* Adaptar al tamaño de pantalla */
             margin-bottom: 1rem;
         }
         .navigation a {
             text-decoration: none;
             color: #fff;
             background-color: #0066cc;
-            padding: 0.5rem 0.75rem; /* Reducido para hacerlo más angosto */
+            padding: 0.5rem 0.75rem;
             border-radius: 4px;
             font-size: 0.875rem;
         }
@@ -37,10 +37,10 @@
         }
         .container {
             background-color: #002244; /* Azul más oscuro */
-            padding: 1.5rem; /* Reducido para hacerlo más angosto */
+            padding: 1.5rem;
             border-radius: 8px;
             width: 100%;
-            max-width: 400px; /* Reducido para hacerlo más angosto */
+            max-width: 90%; /* Adaptar al tamaño de pantalla */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
             margin-bottom: 6rem; /* Espacio suficiente para el nav-bar fijo */
@@ -86,11 +86,11 @@
         }
         .balance {
             background-color: #002244; /* Azul más oscuro */
-            padding: 1rem; /* Reducido para hacerlo más angosto */
+            padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             width: 100%;
-            max-width: 400px; /* Reducido para hacerlo más angosto */
+            max-width: 90%; /* Adaptar al tamaño de pantalla */
             text-align: center;
             color: #fff;
             margin-bottom: 2rem; /* Espacio entre balance y formulario */
@@ -117,6 +117,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: 0.75rem;
         }
         nav img {
             width: 20px; /* Reducido para un aspecto más elegante */
@@ -125,8 +126,22 @@
         }
         nav span {
             display: block;
-            font-size: 0.75rem;
             margin-top: 0.25rem;
+        }
+        @media (max-width: 600px) {
+            .navigation a {
+                font-size: 0.75rem; /* Ajustar tamaño del texto en dispositivos móviles */
+                padding: 0.5rem 0.5rem; /* Reducir padding para móviles */
+            }
+            .container {
+                padding: 1rem; /* Reducir padding para móviles */
+            }
+            .balance {
+                padding: 1rem; /* Reducir padding para móviles */
+            }
+            nav a {
+                font-size: 0.6rem; /* Reducir tamaño del texto en el nav-bar en dispositivos móviles */
+            }
         }
     </style>
 </head>
