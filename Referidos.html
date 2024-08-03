@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Referidos Users</title>
+    <title>Referidos</title>
     <style>
         body {
             display: flex;
@@ -56,6 +56,7 @@
             margin-bottom: 0.5rem;
         }
         nav {
+            dinav {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -66,9 +67,6 @@
             bottom: 0;
             left: 0;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-            z-index: 1000; /* Asegura que el nav-bar esté encima de otros contenidos */
-            background-color: #002244; /* Color de fondo */
-            height: 50px; /* Altura del nav-bar */
         }
         nav a {
             display: flex;
@@ -78,11 +76,11 @@
             color: #fff;
         }
         nav img {
-            width: 30px; /* Tamaño más pequeño para dispositivos móviles */
+            width: 30px; /* Tamaño más grande para las imágenes */
             height: 30px;
         }
         nav span {
-            font-size: 0.65rem;
+            font-size: 0.75rem;
             margin-top: 0.25rem;
         }
     </style>
