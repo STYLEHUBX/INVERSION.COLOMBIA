@@ -10,12 +10,12 @@
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 2rem;
+            padding: 0; /* Eliminar padding para permitir desplazamiento completo */
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative; /* Permite el desplazamiento del contenido */
+            position: relative;
         }
         .navigation {
             display: flex;
@@ -93,6 +93,7 @@
             max-width: 500px;
             text-align: center;
             color: #fff;
+            margin-bottom: 2rem; /* Espacio entre balance y formulario */
         }
         .balance h2 {
             margin-top: 0;
@@ -130,6 +131,11 @@
         <a href="Home.html">Página Anterior</a>
         <a href="Minero.html">Próxima Página</a>
     </div>
+    <div class="balance">
+        <h2>Balance de Usuario</h2>
+        <p>Saldo Actual: $50,000</p>
+        <p>Última Actualización: 01/08/2024</p>
+    </div>
     <div class="container">
         <h1>Formulario de Retiro</h1>
         <form id="retiro-form">
@@ -154,11 +160,6 @@
                 <p>Los Retiros Se Reclamará Los Días Lunes A Viernes Horario 9:00AM 12:00PM</p>
             </div>
         </form>
-    </div>
-    <div class="balance">
-        <h2>Balance de Usuario</h2>
-        <p>Saldo Actual: $50,000</p>
-        <p>Última Actualización: 01/08/2024</p>
     </div>
     <nav>
         <a href="Home.html">
