@@ -10,11 +10,12 @@
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 2rem;
+            padding: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative; /* Permite que el contenido se mueva respecto al nav-bar fijo */
         }
         .navigation {
             display: flex;
@@ -40,6 +41,7 @@
             gap: 1.5rem;
             width: 100%;
             max-width: 1000px;
+            margin-bottom: 4rem; /* Espacio para el nav-bar fijo */
         }
         .card {
             background-color: #002244; /* Azul más oscuro */
@@ -111,7 +113,6 @@
         <a href="Referido.html">Próxima Página</a>
     </div>
     <div class="container">
-        <!-- Se repite el patrón para 5 tarjetas, ajustando los valores -->
         <div class="card">
             <img src="https://via.placeholder.com/80?text=Img1" alt="Imagen 1">
             <div class="card-content">
@@ -164,23 +165,23 @@
         </div>
     </div>
     <nav>
-        <a href="nav1.html">
+        <a href="Home.html">
             <img src="images.png" alt="Home">
             <span>Home</span>
         </a>
-        <a href="nav2.html">
+        <a href="Retiros.html">
             <img src="images (1).png" alt="Billetera">
             <span>Billetera</span>
         </a>
-        <a href="nav3.html">
+        <a href="Minero.html">
             <img src="telegrama-robot-futurista-ai-fondo-negro_738723-109.jpg" alt="Mineros">
             <span>Mineros</span>
         </a>
-        <a href="nav4.html">
+        <a href="Referidos.html">
             <img src="ai-generated-7731326_640.jpg" alt="Referidos">
             <span>Referidos</span>
         </a>
-        <a href="nav5.html">
+        <a href="Perfil.html">
             <img src="profile-icon-design-free-vector.jpg" alt="Perfil">
             <span>Perfil</span>
         </a>
