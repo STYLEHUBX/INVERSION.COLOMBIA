@@ -39,8 +39,8 @@
             background-color: #002244; /* Azul más oscuro */
             padding: 1.5rem;
             border-radius: 8px;
-            width: 100%;
-            max-width: 90%; /* Adaptar al tamaño de pantalla */
+            width: 70%;
+            max-width: 70%; /* Adaptar al tamaño de pantalla */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
             margin-bottom: 6rem; /* Espacio suficiente para el nav-bar fijo */
@@ -58,7 +58,7 @@
         }
         .form-group select,
         .form-group input {
-            width: 100%;
+            width: 80%;
             padding: 0.5rem;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -152,7 +152,7 @@
     </div>
     <div class="balance">
         <h2>Balance de Usuario</h2>
-        <p>Saldo Actual: $50,000</p>
+        <p id="saldo">Saldo Actual: $50,000</p>
         <p>Última Actualización: 01/08/2024</p>
     </div>
     <div class="container">
@@ -172,7 +172,7 @@
             </div>
             <div class="form-group">
                 <label for="cantidad">Cantidad</label>
-                <input type="number" id="cantidad" min="0" required>
+                <input type="number" id="cantidad" min="0" placeholder="Mínimo $20,000 COP" required>
             </div>
             <div class="form-group">
                 <button type="submit">Retirar</button>
@@ -203,17 +203,20 @@
         </a>
     </nav>
     <script>
+        let saldoActual = 50000; // Saldo inicial
+
         document.getElementById('retiro-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const cantidad = parseFloat(document.getElementById('cantidad').value);
-            const saldoActual = 50000; // Saldo actual de ejemplo
             const retiroMinimo = 20000;
 
             if (cantidad < retiroMinimo) {
                 alert('El monto mínimo para retiro es de $20,000 COP.');
             } else if (cantidad > saldoActual) {
-                alert('Saldo insuficiente.');
+                alert('Saldo insuficiente. Adquiera un VIP para obtener ganancias y retirar.');
             } else {
+                saldoActual -= cantidad;
+                document.getElementById('saldo').textContent = `Saldo Actual: $${saldoActual.toFixed(2)}`;
                 alert('Su retiro está en proceso');
             }
         });
