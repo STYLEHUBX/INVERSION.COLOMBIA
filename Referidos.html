@@ -14,7 +14,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            padding-bottom: 4rem; /* Espacio para el nav-bar en la parte inferior */
         }
         nav {
             display: flex;
@@ -27,6 +26,7 @@
             bottom: 0;
             left: 0;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000; /* Asegura que el nav-bar esté encima de otros contenidos */
         }
         nav a {
             display: flex;
@@ -53,6 +53,7 @@
             max-width: 500px;
             margin-top: 2rem; /* Espacio superior para evitar que el contenido se superponga con el nav-bar */
             text-align: center;
+            margin-bottom: 5rem; /* Espacio inferior para evitar que el contenido se superponga con el nav-bar */
         }
         .referidos-container h2 {
             margin-bottom: 1rem;
