@@ -3,133 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inversiones Colombia</title>
+    <title>Detalles de Inversiones</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background-color: #003366; /* Azul oscuro */
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-top: 2rem;
-            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
-            position: relative; /* Permite que los hijos se posicionen de forma relativa */
-            padding-bottom: 4rem; /* Da espacio para la barra de navegación */
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .bio-image-container {
-            width: 200px;
-            height: 100px; /* Establece la altura de la imagen a 100px */
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-        .bio-image {
-            width: 100%;
-            height: 100%; /* Asegúrate de que la imagen ocupe el contenedor */
-            object-fit: cover;
-        }
-        .button-container {
-            margin-bottom: 1rem;
-        }
-        .button-container button {
-            margin: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: #0066cc; /* Azul medio */
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .button-container button:hover {
-            background-color: #005bb5; /* Azul más oscuro */
-        }
-        .section {
-            width: 80%;
-            max-width: 600px;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border: 2px solid #fff; /* Borde blanco alrededor del cuadrado */
-            border-radius: 8px; /* Esquinas redondeadas */
-            background-color: #002244; /* Fondo gris oscuro */
-            text-align: center;
-        }
-        nav {
+            padding: 2rem;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-            background-color: #002244; /* Azul más oscuro */
-            padding: 1rem;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
+            flex-direction: column;
+            align-items: center;
         }
-        nav a {
-            margin: 0 1rem;
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 2rem;
+        }
+        .navigation a {
             text-decoration: none;
             color: #fff;
-            text-align: center;
+            background-color: #0066cc;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
         }
-        nav img {
-            width: 40px; /* Tamaño más grande para las imágenes */
-            height: 40px;
-            display: block;
-            margin: 0 auto;
+        .navigation a:hover {
+            background-color: #005bb5;
         }
-        nav span {
-            display: block;
-            font-size: 0.75rem;
-            margin-top: 0.25rem;
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background-color: #002244; /* Azul más oscuro */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            color: #fff;
+            text-align: left;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        .card-content {
+            flex: 1;
+        }
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .card-content .text {
+            margin: 0.5rem 0;
+        }
+        .card .arrow {
+            font-size: 1.5rem;
+            color: #0066cc;
+            cursor: pointer;
+        }
+        .card .arrow:hover {
+            color: #005bb5;
         }
     </style>
 </head>
 <body>
-    <h1>Inversiones Colombia</h1>
-    <div class="bio-image-container">
-        <img src="f.elconfidencial.com_original_f1b_42b_413_f1b42b4134006e638b05e1bbd69f0f9e.jpg" class="bio-image">
+    <div class="navigation">
+        <a href="Retiros.html">Página Anterior</a>
+        <a href="Referido.html">Próxima Página</a>
     </div>
-    <div class="button-container">
-        <button onclick="location.href='Retiros.html'">Retiros</button>
-        <button onclick="location.href='pagina2.html'">Telegram</button>
-        <button onclick="location.href='pagina3.html'">Depositos</button>
+    <div class="container">
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Img1" alt="Imagen 1">
+            <div class="card-content">
+                <h3>Detalle 1</h3>
+                <div class="text">Valor de Compra: $500</div>
+                <div class="text">Ganancias Diarias: $50</div>
+                <div class="text">Cantidad Total: $1500</div>
+            </div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Img2" alt="Imagen 2">
+            <div class="card-content">
+                <h3>Detalle 2</h3>
+                <div class="text">Valor de Compra: $400</div>
+                <div class="text">Ganancias Diarias: $40</div>
+                <div class="text">Cantidad Total: $1200</div>
+            </div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Img3" alt="Imagen 3">
+            <div class="card-content">
+                <h3>Detalle 3</h3>
+                <div class="text">Valor de Compra: $600</div>
+                <div class="text">Ganancias Diarias: $60</div>
+                <div class="text">Cantidad Total: $1800</div>
+            </div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Img4" alt="Imagen 4">
+            <div class="card-content">
+                <h3>Detalle 4</h3>
+                <div class="text">Valor de Compra: $700</div>
+                <div class="text">Ganancias Diarias: $70</div>
+                <div class="text">Cantidad Total: $2100</div>
+            </div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Img5" alt="Imagen 5">
+            <div class="card-content">
+                <h3>Detalle 5</h3>
+                <div class="text">Valor de Compra: $800</div>
+                <div class="text">Ganancias Diarias: $80</div>
+                <div class="text">Cantidad Total: $2400</div>
+            </div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
     </div>
-    <div class="section">
-        <h2>Actividad</h2>
-        <p>Gana un minero invitando a usuarios a recargar.</p>
-        <p>Invita a tus amigos y gana recompensas por cada recarga que realicen.</p>
-    </div>
-    <div class="section">
-        <h2>¿Quiénes Somos?</h2>
-        <p>Somos una empresa dedicada a brindar las mejores oportunidades de inversión en Colombia.</p>
-    </div>
-    <div class="section">
-        <h2>¿Cómo Funciona el Minado?</h2>
-        <p>El minado funciona a través de la participación activa en nuestra plataforma, donde los usuarios pueden obtener beneficios por sus inversiones y actividades.</p>
-    </div>
-    <nav>
-        <a href="nav1.html">
-            <img src="images.png">
-            <span>Home</span>
-        </a>
-        <a href="Retiros.html">
-            <img src="images (1).png">
-            <span>Billetera</span>
-        </a>
-        <a href="Minero.html">
-            <img src="telegrama-robot-futurista-ai-fondo-negro_738723-109.jpg">
-            <span>Mineros</span>
-        </a>
-        <a href="Referido.html">
-            <img src="ai-generated-7731326_640.jpg">
-            <span>Referidos</span>
-        </a>
-        <a href="Perfil.html">
-            <img src="profile-icon-design-free-vector.jpg">
-            <span>Perfil</span>
-        </a>
-    </nav>
 </body>
 </html>
