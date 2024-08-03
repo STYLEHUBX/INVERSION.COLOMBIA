@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retiros</title>
+    <title>Retiros Users</title>
     <style>
         body {
             background-color: #003366; /* Azul oscuro */
@@ -102,7 +102,7 @@
             display: flex;
             justify-content: space-around;
             background-color: #002244; /* Azul más oscuro */
-            padding: 0.5rem 1rem;
+            padding: 0.5rem;
             width: 100%;
             position: fixed;
             bottom: 0;
@@ -120,8 +120,8 @@
             font-size: 0.75rem;
         }
         nav img {
-            width: 20px; /* Reducido para un aspecto más elegante */
-            height: 20px;
+            width: 24px; /* Reducido para un aspecto más elegante */
+            height: 24px;
             display: block;
         }
         nav span {
@@ -205,7 +205,17 @@
     <script>
         document.getElementById('retiro-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Su retiro está en proceso');
+            const cantidad = parseFloat(document.getElementById('cantidad').value);
+            const saldoActual = 50000; // Saldo actual de ejemplo
+            const retiroMinimo = 20000;
+
+            if (cantidad < retiroMinimo) {
+                alert('El monto mínimo para retiro es de $20,000 COP.');
+            } else if (cantidad > saldoActual) {
+                alert('Saldo insuficiente.');
+            } else {
+                alert('Su retiro está en proceso');
+            }
         });
     </script>
 </body>
