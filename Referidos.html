@@ -14,6 +14,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            padding-bottom: 4rem; /* Espacio para el nav-bar en la parte inferior */
         }
         nav {
             display: flex;
@@ -22,7 +23,7 @@
             padding: 1rem;
             width: 100%;
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
             z-index: 1000;
         }
@@ -49,7 +50,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 600px;
-            margin: 5rem 0 2rem; /* Adjusted margin-top for the fixed nav */
+            margin-top: 2rem; /* Espacio superior para evitar que el contenido se superponga con el nav-bar */
             text-align: center;
         }
         .referidos-container h2 {
@@ -83,6 +84,17 @@
     </style>
 </head>
 <body>
+    <div class="referidos-container">
+        <h2>Comparte tu Enlace de Referido</h2>
+        <p>Comparte el siguiente enlace con tus amigos para ganar recompensas por sus depósitos:</p>
+        <input type="text" id="referral-link" value="https://stylehubx.github.io/INVERSION.COLOMBIA/Index.html" readonly>
+        <button class="copy-button" onclick="copyReferralLink()">Copiar Enlace</button>
+        <div class="info">
+            <h3>Ganancias de Referidos</h3>
+            <p>Obtén un 15% de las ganancias por depósitos entre $20,000 y $50,000.</p>
+            <p>Obtén un 30% de las ganancias por depósitos mayores a $50,000.</p>
+        </div>
+    </div>
     <nav>
         <a href="Home.html">
             <img src="images.png" alt="Home">
@@ -105,17 +117,6 @@
             <span>Perfil</span>
         </a>
     </nav>
-    <div class="referidos-container">
-        <h2>Comparte tu Enlace de Referido</h2>
-        <p>Comparte el siguiente enlace con tus amigos para ganar recompensas por sus depósitos:</p>
-        <input type="text" id="referral-link" value="https://stylehubx.github.io/INVERSION.COLOMBIA/Index.html" readonly>
-        <button class="copy-button" onclick="copyReferralLink()">Copiar Enlace</button>
-        <div class="info">
-            <h3>Ganancias de Referidos</h3>
-            <p>Obtén un 15% de las ganancias por depósitos entre $20,000 y $50,000.</p>
-            <p>Obtén un 30% de las ganancias por depósitos mayores a $50,000.</p>
-        </div>
-    </div>
     <script>
         function copyReferralLink() {
             const linkInput = document.getElementById('referral-link');
