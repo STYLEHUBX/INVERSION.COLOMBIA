@@ -13,11 +13,33 @@
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 2rem;
+            padding: 0;
         }
-        h1 {
-            text-align: center;
-            margin-bottom: 1rem;
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #002244; /* Azul más oscuro */
+            padding: 1rem;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav a {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #fff;
+        }
+        nav img {
+            width: 30px;
+            height: 30px;
+            margin-right: 0.5rem;
+        }
+        nav span {
+            font-size: 0.9rem;
         }
         .referidos-container {
             background-color: #fff;
@@ -27,7 +49,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 600px;
-            margin-bottom: 2rem;
+            margin: 5rem 0 2rem; /* Adjusted margin-top for the fixed nav */
             text-align: center;
         }
         .referidos-container h2 {
@@ -61,7 +83,28 @@
     </style>
 </head>
 <body>
-    <h1>Programa de Referidos</h1>
+    <nav>
+        <a href="Home.html">
+            <img src="images.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="Retiros.html">
+            <img src="images (1).png" alt="Billetera">
+            <span>Billetera</span>
+        </a>
+        <a href="Minero.html">
+            <img src="telegrama-robot-futurista-ai-fondo-negro_738723-109.jpg" alt="Mineros">
+            <span>Mineros</span>
+        </a>
+        <a href="Referido.html">
+            <img src="ai-generated-7731326_640.jpg" alt="Referidos">
+            <span>Referidos</span>
+        </a>
+        <a href="Perfil.html">
+            <img src="profile-icon-design-free-vector.jpg" alt="Perfil">
+            <span>Perfil</span>
+        </a>
+    </nav>
     <div class="referidos-container">
         <h2>Comparte tu Enlace de Referido</h2>
         <p>Comparte el siguiente enlace con tus amigos para ganar recompensas por sus depósitos:</p>
