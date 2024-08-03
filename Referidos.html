@@ -15,34 +15,6 @@
             margin: 0;
             padding: 0;
         }
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #002244; /* Azul más oscuro */
-            padding: 0.5rem;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            z-index: 1000; /* Asegura que el nav-bar esté encima de otros contenidos */
-        }
-        nav a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #fff;
-        }
-        nav img {
-            width: 30px; /* Tamaño más grande para las imágenes */
-            height: 30px;
-        }
-        nav span {
-            font-size: 0.55rem;
-            margin-top: 0.25rem;
-        }
         .referidos-container {
             background-color: #fff;
             color: #003366; /* Azul oscuro */
@@ -82,6 +54,36 @@
         }
         .info h3 {
             margin-bottom: 0.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #002244; /* Azul más oscuro */
+            padding: 0.5rem;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000; /* Asegura que el nav-bar esté encima de otros contenidos */
+            background-color: #002244; /* Color de fondo */
+            height: 50px; /* Altura del nav-bar */
+        }
+        nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+        }
+        nav img {
+            width: 30px; /* Tamaño más pequeño para dispositivos móviles */
+            height: 30px;
+        }
+        nav span {
+            font-size: 0.65rem;
+            margin-top: 0.25rem;
         }
     </style>
 </head>
