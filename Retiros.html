@@ -10,12 +10,12 @@
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0; /* Eliminar padding para permitir desplazamiento completo */
+            padding: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
+            padding-bottom: 4rem; /* Espacio para el nav-bar fijo */
         }
         .navigation {
             display: flex;
@@ -106,6 +106,7 @@
             width: 100%;
             position: fixed;
             bottom: 0;
+            left: 0;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
         }
         nav a {
