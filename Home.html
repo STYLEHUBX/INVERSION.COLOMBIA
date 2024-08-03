@@ -14,6 +14,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding-top: 2rem;
+            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
+            position: relative; /* Permite que los hijos se posicionen de forma relativa */
+            padding-bottom: 4rem; /* Da espacio para la barra de navegación */
         }
         h1 {
             text-align: center;
@@ -56,7 +59,7 @@
             background-color: #002244; /* Azul más oscuro */
             padding: 1rem;
             width: 100%;
-            position: fixed;
+            position: absolute;
             bottom: 0;
         }
         nav a {
