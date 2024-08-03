@@ -77,6 +77,32 @@
         .card .arrow:hover {
             color: #005bb5;
         }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #002244; /* Azul más oscuro */
+            padding: 1rem;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+        }
+        nav a {
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        nav img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: 0 auto;
+        }
+        nav span {
+            display: block;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
     </style>
 </head>
 <body>
@@ -85,13 +111,14 @@
         <a href="Referido.html">Próxima Página</a>
     </div>
     <div class="container">
+        <!-- Se repite el patrón para 5 tarjetas, ajustando los valores -->
         <div class="card">
             <img src="https://via.placeholder.com/80?text=Img1" alt="Imagen 1">
             <div class="card-content">
                 <h3>Detalle 1</h3>
-                <div class="text">Valor de Compra: $500</div>
-                <div class="text">Ganancias Diarias: $50</div>
-                <div class="text">Cantidad Total: $1500</div>
+                <div class="text">Valor de Compra: $20,000</div>
+                <div class="text">Ganancias Diarias: $2,000 (10%)</div>
+                <div class="text">Cantidad Total: $600,000</div>
             </div>
             <div class="arrow" onclick="location.href='depositos.html'">→</div>
         </div>
@@ -99,9 +126,9 @@
             <img src="https://via.placeholder.com/80?text=Img2" alt="Imagen 2">
             <div class="card-content">
                 <h3>Detalle 2</h3>
-                <div class="text">Valor de Compra: $400</div>
-                <div class="text">Ganancias Diarias: $40</div>
-                <div class="text">Cantidad Total: $1200</div>
+                <div class="text">Valor de Compra: $40,000</div>
+                <div class="text">Ganancias Diarias: $4,000 (10%)</div>
+                <div class="text">Cantidad Total: $1,200,000</div>
             </div>
             <div class="arrow" onclick="location.href='depositos.html'">→</div>
         </div>
@@ -109,9 +136,9 @@
             <img src="https://via.placeholder.com/80?text=Img3" alt="Imagen 3">
             <div class="card-content">
                 <h3>Detalle 3</h3>
-                <div class="text">Valor de Compra: $600</div>
-                <div class="text">Ganancias Diarias: $60</div>
-                <div class="text">Cantidad Total: $1800</div>
+                <div class="text">Valor de Compra: $60,000</div>
+                <div class="text">Ganancias Diarias: $6,000 (10%)</div>
+                <div class="text">Cantidad Total: $1,800,000</div>
             </div>
             <div class="arrow" onclick="location.href='depositos.html'">→</div>
         </div>
@@ -119,9 +146,9 @@
             <img src="https://via.placeholder.com/80?text=Img4" alt="Imagen 4">
             <div class="card-content">
                 <h3>Detalle 4</h3>
-                <div class="text">Valor de Compra: $700</div>
-                <div class="text">Ganancias Diarias: $70</div>
-                <div class="text">Cantidad Total: $2100</div>
+                <div class="text">Valor de Compra: $80,000</div>
+                <div class="text">Ganancias Diarias: $8,000 (10%)</div>
+                <div class="text">Cantidad Total: $2,400,000</div>
             </div>
             <div class="arrow" onclick="location.href='depositos.html'">→</div>
         </div>
@@ -129,12 +156,34 @@
             <img src="https://via.placeholder.com/80?text=Img5" alt="Imagen 5">
             <div class="card-content">
                 <h3>Detalle 5</h3>
-                <div class="text">Valor de Compra: $800</div>
-                <div class="text">Ganancias Diarias: $80</div>
-                <div class="text">Cantidad Total: $2400</div>
+                <div class="text">Valor de Compra: $100,000</div>
+                <div class="text">Ganancias Diarias: $10,000 (10%)</div>
+                <div class="text">Cantidad Total: $3,000,000</div>
             </div>
             <div class="arrow" onclick="location.href='depositos.html'">→</div>
         </div>
     </div>
+    <nav>
+        <a href="nav1.html">
+            <img src="images.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="nav2.html">
+            <img src="images (1).png" alt="Billetera">
+            <span>Billetera</span>
+        </a>
+        <a href="nav3.html">
+            <img src="telegrama-robot-futurista-ai-fondo-negro_738723-109.jpg" alt="Mineros">
+            <span>Mineros</span>
+        </a>
+        <a href="nav4.html">
+            <img src="ai-generated-7731326_640.jpg" alt="Referidos">
+            <span>Referidos</span>
+        </a>
+        <a href="nav5.html">
+            <img src="profile-icon-design-free-vector.jpg" alt="Perfil">
+            <span>Perfil</span>
+        </a>
+    </nav>
 </body>
 </html>
