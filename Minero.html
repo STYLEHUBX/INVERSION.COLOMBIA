@@ -1,1 +1,125 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Inversiones</title>
+    <style>
+        body {
+            background-color: #003366; /* Azul oscuro */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 2rem;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0066cc;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .navigation a:hover {
+            background-color: #005bb5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .box {
+            background-color: #002244; /* Azul más oscuro */
+            padding: 1rem;
+            border-radius: 8px;
+            width: 18%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            text-align: center;
+        }
+        .box img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        .box h3 {
+            margin: 1rem 0;
+        }
+        .box .text {
+            margin-bottom: 0.5rem;
+        }
+        .box .arrow {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: #0066cc;
+            cursor: pointer;
+        }
+        .box .arrow:hover {
+            color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="pagina_anterior.html">Página Anterior</a>
+        <a href="pagina_siguiente.html">Próxima Página</a>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="https://via.placeholder.com/50?text=Img1" alt="Imagen 1">
+            <h3>Detalle 1</h3>
+            <div class="text">Valor de Compra: $500</div>
+            <div class="text">Ganancias Diarias: $50</div>
+            <div class="text">Cantidad Total: $1500</div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="box">
+            <img src="https://via.placeholder.com/50?text=Img2" alt="Imagen 2">
+            <h3>Detalle 2</h3>
+            <div class="text">Valor de Compra: $400</div>
+            <div class="text">Ganancias Diarias: $40</div>
+            <div class="text">Cantidad Total: $1200</div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="box">
+            <img src="https://via.placeholder.com/50?text=Img3" alt="Imagen 3">
+            <h3>Detalle 3</h3>
+            <div class="text">Valor de Compra: $600</div>
+            <div class="text">Ganancias Diarias: $60</div>
+            <div class="text">Cantidad Total: $1800</div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="box">
+            <img src="https://via.placeholder.com/50?text=Img4" alt="Imagen 4">
+            <h3>Detalle 4</h3>
+            <div class="text">Valor de Compra: $700</div>
+            <div class="text">Ganancias Diarias: $70</div>
+            <div class="text">Cantidad Total: $2100</div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+        <div class="box">
+            <img src="https://via.placeholder.com/50?text=Img5" alt="Imagen 5">
+            <h3>Detalle 5</h3>
+            <div class="text">Valor de Compra: $800</div>
+            <div class="text">Ganancias Diarias: $80</div>
+            <div class="text">Cantidad Total: $2400</div>
+            <div class="arrow" onclick="location.href='depositos.html'">→</div>
+        </div>
+    </div>
+</body>
+</html>
