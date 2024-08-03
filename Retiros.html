@@ -15,6 +15,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative; /* Permite el desplazamiento del contenido */
         }
         .navigation {
             display: flex;
@@ -42,6 +43,7 @@
             max-width: 500px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
+            margin-bottom: 6rem; /* Espacio suficiente para el nav-bar fijo */
         }
         h1 {
             margin-bottom: 1.5rem;
@@ -81,6 +83,19 @@
         }
         .form-group button:hover {
             background-color: #005bb5;
+        }
+        .balance {
+            background-color: #002244; /* Azul más oscuro */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            color: #fff;
+        }
+        .balance h2 {
+            margin-top: 0;
         }
         nav {
             display: flex;
@@ -139,6 +154,11 @@
                 <p>Los Retiros Se Reclamará Los Días Lunes A Viernes Horario 9:00AM 12:00PM</p>
             </div>
         </form>
+    </div>
+    <div class="balance">
+        <h2>Balance de Usuario</h2>
+        <p>Saldo Actual: $50,000</p>
+        <p>Última Actualización: 01/08/2024</p>
     </div>
     <nav>
         <a href="Home.html">
