@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiros</title>
+    <style>
+        body {
+            background-color: #003366; /* Azul oscuro */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #002244; /* Azul más oscuro */
+            padding: 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #000;
+        }
+        .form-group input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        .form-group input[type="number"]::-webkit-inner-spin-button,
+        .form-group input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .form-group button {
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #005bb5;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 1rem;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0066cc;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .navigation a:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="pagina_anterior.html">Página Anterior</a>
+        <a href="pagina_siguiente.html">Próxima Página</a>
+    </div>
+    <div class="container">
+        <h1>Formulario de Retiro</h1>
+        <form id="retiro-form">
+            <div class="form-group">
+                <label for="forma-retiro">Selecciona la forma de retiro</label>
+                <select id="forma-retiro" required>
+                    <option value="">Selecciona</option>
+                    <option value="newui">Newui</option>
+                    <option value="ban-colombia">Ban Colombia</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <input type="text" id="numero" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" min="0" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Retirar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('retiro-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Su retiro está en proceso');
+        });
+    </script>
+</body>
+</html>
