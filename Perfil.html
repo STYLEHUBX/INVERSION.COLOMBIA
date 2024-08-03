@@ -1,1 +1,76 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .profile-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .profile-id, .profile-email {
+            margin: 5px 0;
+        }
+        .balance, .recharges {
+            margin: 20px 0;
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .buttons-container button {
+            margin: 5px;
+            flex: 1 1 calc(50% - 10px);
+        }
+        .buttons-container .last-button {
+            flex: 1 1 100%;
+            margin-top: 10px;
+        }
+        .license {
+            margin-top: 20px;
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Image" class="profile-img">
+        <div class="profile-id">ID: 123456</div>
+        <div class="profile-email">usuario@ejemplo.com</div>
+        <div class="balance">Balance: $0.00</div>
+        <div class="recharges">Recargas: $0.00</div>
+        <div class="buttons-container">
+            <button>Botón 1</button>
+            <button>Botón 2</button>
+            <button>Botón 3</button>
+            <button>Botón 4</button>
+            <button class="last-button">Botón 5</button>
+        </div>
+        <div class="license">Licencia de Inversiones Colombia</div>
+    </div>
+</body>
+</html>
