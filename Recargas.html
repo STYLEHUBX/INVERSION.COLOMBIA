@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            color: white;
+        }
+        .profile-container {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 350px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .profile-id {
+            margin: 5px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .balance, .recharges {
+            margin: 20px 0;
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .buttons-container button {
+            margin: 5px;
+            flex: 1 1 calc(50% - 10px);
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons-container .last-button {
+            flex: 1 1 100%;
+            margin-top: 10px;
+        }
+        .license {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #bdc3c7;
+        }
+        .qr-images {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .qr-images img {
+            width: 45%;
+            border-radius: 10px;
+        }
+        .qr-images div {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .recarga-form {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .recarga-form label {
+            display: block;
+            margin-top: 10px;
+        }
+        .recarga-form input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .recarga-form input.read-only {
+            background-color: #34495e;
+            color: #ecf0f1;
+            cursor: pointer;
+        }
+        .recarga-form button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .copy-text {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            user-select: none; /* Prevent text selection */
+        }
+    </style>
+    <script>
+        function generateRandomID() {
+            return Math.floor(100000 + Math.random() * 900000);
+        }
 
+        function handleSubmitNequi(event) {
+            event.preventDefault();
+            alert('Tu envío de depósito está en proceso, ten paciencia.');
+        }
+
+        function handleSubmitUSDT(event) {
+            event.preventDefault();
+            alert('El mínimo de retiro son 5.00 USDT, 20.000 Mil pesos Colombianos.');
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Texto copiado al portapapeles.');
+            }).catch(err => {
+                alert('Error al copiar el texto.');
+            });
+        }
+
+        window.onload = function() {
+            document.getElementById('profile-id').textContent = 'ID: ' + generateRandomID();
+            document.querySelectorAll('.recarga-form.nequi-form button').forEach(button => {
+                button.addEventListener('click', handleSubmitNequi);
+            });
+            document.querySelectorAll('.recarga-form.usdt-form button').forEach(button => {
+                button.addEventListener('click', handleSubmitUSDT);
+            });
+            document.querySelectorAll('.copy-text').forEach(elem => {
+                elem.addEventListener('click', () => copyToClipboard(elem.textContent));
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Image" class="profile-img">
+        <div id="profile-id" class="profile-id"></div>
+        <div class="balance">Balance: $0.00</div>
+        <div class="recharges">Recargas: $0.00</div>
+        <div class="license">Licencia de Inversiones Colombia</div>
+        <div class="recarga-form nequi-form">
+            <h3>Recarga con Nequi</h3>
+            <img src="nequi-qr.png" alt="Depósito NEQUI">
+            <div>Depósito NEQUI</div>
+            <form>
+                <label for="codigo-referencia-nequi">Código de Referencia Nequi</label>
+                <input type="text" id="codigo-referencia-nequi" placeholder="Ingrese el código de referencia" required>
+                <label for="numero-telefono">Número de Teléfono</label>
+                <input type="text" id="numero-telefono" placeholder="Ingrese su número de teléfono" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="recarga-form usdt-form">
+            <h3>Recarga con USDT</h3>
+            <img src="https://github.com/user-attachments/assets/fdda3dff-9f15-4b5b-b285-423728481a9d" alt="Depósito TRC20-USDT">
+            <div>Depósito TRC20-USDT</div>
+            <form>
+                <label for="tixd">TIXD</label>
+                <input type="text" id="tixd" placeholder="Ingrese el TIXD" required>
+                <label for="id-binance">ID de Binance</label>
+                <input type="text" id="id-binance" placeholder="Ingrese el ID de Binance" required>
+                <label for="textt">Dirección de Depósito TRC20-USDT</label>
+                <input type="text" id="textt" value="TJ6QaxbDeK2sHbeTLWjKFdqiG4eiCaivNu" class="read-only" readonly>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="copy-text" onclick="copyToClipboard('TJ6QaxbDeK2sHbeTLWjKFdqiG4eiCaivNu')">
+                TJ6QaxbDeK2sHbeTLWjKFdqiG4eiCaivNu
+            </div>
+        </div>
+    </div>
+</body>
+</html>
