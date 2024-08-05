@@ -20,20 +20,20 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 300px;
+            width: 250px; /* Estilo más angosto */
         }
         .register-container h2 {
             margin-bottom: 1rem;
         }
         .register-container input {
-            width: 100%;
+            width: calc(100% - 1rem); /* Más angosto */
             padding: 0.5rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
         .register-container button {
-            width: 100%;
+            width: calc(100% - 1rem); /* Más angosto */
             padding: 0.5rem;
             background-color: #0066cc; /* Azul medio */
             color: #fff;
@@ -53,19 +53,34 @@
         .login-link:hover {
             text-decoration: underline;
         }
+        .referido {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="register-container">
         <h2>Registro</h2>
         <form action="Home.html">
-            <input type="text" placeholder="+57" disabled>
+            <input type="text" value="+57" disabled>
             <input type="tel" placeholder="Número de Celular" required>
             <input type="password" placeholder="Contraseña" required>
-            <input type="password", placholder="Contraseña" required>
+            <input type="password" placeholder="Confirmar Contraseña" required>
             <button type="submit">Registrar</button>
         </form>
+        <div class="referido">
+            Referido: <span id="referido"></span>
+        </div>
         <a class="login-link" href="Login.html">¿Ya Tienes Cuenta? INICIA SESIÓN</a>
     </div>
+    <script>
+        function generateRandomNumber() {
+            return Math.floor(10000000 + Math.random() * 90000000);
+        }
+        
+        document.getElementById('referido').textContent = generateRandomNumber();
+    </script>
 </body>
 </html>
