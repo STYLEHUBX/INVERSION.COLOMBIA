@@ -84,8 +84,9 @@
             margin-bottom: 10px;
         }
         .qr-images img {
-            width: 20%;
-            border-radius: 10px;
+            width: 30px; /* Adjusted width to 30px */
+            height: 30px; /* Adjusted height to 30px */
+            border-radius: 5px; /* Adjusted border radius for a smaller image */
         }
         .qr-images div {
             text-align: center;
@@ -182,7 +183,9 @@
         <div class="license">Licencia de Inversiones Colombia</div>
         <div class="recarga-form nequi-form">
             <h3>Recarga con Nequi</h3>
-            <img src="https://github.com/user-attachments/assets/545ecc32-fc03-4ade-a522-15f0d7fcba3f" alt="Depósito NEQUI">
+            <div class="qr-images">
+                <img src="https://github.com/user-attachments/assets/545ecc32-fc03-4ade-a522-15f0d7fcba3f" alt="Depósito NEQUI">
+            </div>
             <div>Depósito NEQUI</div>
             <form>
                 <label for="codigo-referencia-nequi">Código de Referencia Nequi</label>
@@ -194,7 +197,9 @@
         </div>
         <div class="recarga-form usdt-form">
             <h3>Recarga con USDT</h3>
-            <img src="https://github.com/user-attachments/assets/fdda3dff-9f15-4b5b-b285-423728481a9d" alt="Depósito TRC20-USDT">
+            <div class="qr-images">
+                <img src="https://github.com/user-attachments/assets/fdda3dff-9f15-4b5b-b285-423728481a9d" alt="Depósito TRC20-USDT">
+            </div>
             <div>Depósito TRC20-USDT</div>
             <form>
                 <label for="tixd">TIXD</label>
